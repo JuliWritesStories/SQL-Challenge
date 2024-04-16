@@ -95,3 +95,11 @@ INNER JOIN
 	"departments" ON
 	"dept_emp"."dept_no" = "departments"."dept_no"
 WHERE "departments"."dept_name" = 'Sales' OR "departments"."dept_name" = 'Development';
+
+-- last name frequency
+SELECT 	
+	"employees"."last_name",count(last_name)
+FROM 
+	"employees"
+GROUP BY 1
+ORDER BY 2 DESC;
