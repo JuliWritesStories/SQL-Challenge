@@ -35,3 +35,21 @@ INNER JOIN
 INNER JOIN
 	"departments" ON
 	"dept_manager"."dept_no" = "departments"."dept_no"
+
+--list department number for each employees with number, last name, first name, and department name
+SELECT
+	"dept_emp"."emp_no",
+	"dept_emp"."dept_no",
+	"departments"."dept_name",
+	"employees"."first_name",
+	"employees"."last_name"
+	
+FROM
+	"employees"
+INNER JOIN
+	"dept_emp" ON
+	"employees"."emp_no" = "dept_emp"."emp_no"
+INNER JOIN
+	"departments" ON
+	"dept_emp"."dept_no" = "departments"."dept_no"
+
