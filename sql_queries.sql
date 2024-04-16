@@ -11,3 +11,12 @@ INNER JOIN
 	"salaries" ON
 	"employees"."emp_no" = "salaries"."emp_no";
     
+-- List first, last, and hire date for 1986 employees
+SELECT
+	"employees"."first_name",
+	"employees"."last_name",
+	"employees"."hire_date"
+FROM
+	"employees"
+WHERE EXTRACT(YEAR FROM "hire_date") = 1986;
+
