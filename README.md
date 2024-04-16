@@ -1,1 +1,2 @@
 # SQL-Challenge
+For this challenge, I created a database in pgAdmin4 containing company data. I started by making a schema in quickDBD. I then entered my schema into pgAdmin4 to create the tables. I uploaded my csv files into each relevant table. I then used the query tool to call and analyze the data. I was assisted by chat gpt for this challenge. 
