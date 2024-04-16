@@ -78,3 +78,20 @@ INNER JOIN
 	"departments" ON
 	"dept_emp"."dept_no" = "departments"."dept_no"
 WHERE "departments"."dept_name" = 'Sales';
+
+--Sales department and development department
+SELECT
+	"dept_emp"."emp_no",
+	"dept_emp"."dept_no",
+	"departments"."dept_name",
+	"employees"."first_name",
+	"employees"."last_name"
+FROM
+	"employees"
+INNER JOIN
+	"dept_emp" ON
+	"employees"."emp_no" = "dept_emp"."emp_no"
+INNER JOIN
+	"departments" ON
+	"dept_emp"."dept_no" = "departments"."dept_no"
+WHERE "departments"."dept_name" = 'Sales' OR "departments"."dept_name" = 'Development';
