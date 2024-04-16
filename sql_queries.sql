@@ -53,3 +53,12 @@ INNER JOIN
 	"departments" ON
 	"dept_emp"."dept_no" = "departments"."dept_no"
 
+-- Hercules employees
+SELECT
+	"employees"."first_name",
+	"employees"."last_name",
+	"employees"."sex"
+FROM
+	"employees"
+WHERE "employees"."first_name" = 'Hercules' AND "employees"."last_name" LIKE 'B%';
+
